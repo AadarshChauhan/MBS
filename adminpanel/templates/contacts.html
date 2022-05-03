@@ -1,0 +1,186 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{%block content%}
+                <!-- begin app-main -->
+                <div class="app-main" id="main">
+                    <!-- begin container-fluid -->
+                    <div class="container-fluid">
+                        <!-- begin row -->
+                        <div class="row">
+                            <div class="col-md-12 m-b-30">
+                                <!-- begin page title -->
+                                <div class="d-block d-sm-flex flex-nowrap align-items-center">
+                                    <div class="page-title mb-2 mb-sm-0">
+                                        <h1>Contacts</h1>
+                                    </div>
+                                    <div class="ml-auto d-flex align-items-center">
+                                        <nav>
+                                            <ol class="breadcrumb p-0 m-b-0">
+                                                <li class="breadcrumb-item">
+                                                    <a href="index.html"><i class="ti ti-home"></i></a>
+                                                </li>
+                                                <li class="breadcrumb-item">
+                                                    Contacts
+                                                </li>
+                                               
+                                            </ol>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <!-- end page title -->
+                            </div>
+                        </div>
+                        <!-- end row -->
+                        <!-- begin row -->
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="card card-statistics">
+                                    <div class="card-body">
+
+                                        <div class="card-body">
+                                                    <button class="btn btn-primary" data-toggle="modal" data-target="#largeModal">Add New User</button>
+                                        </div>
+                                     
+
+                        <!-- Start Modal Data -->
+                        <div class="modal fade" id="largeModal" tabindex="-1" role="dialog" aria-labelledby="largeModal" aria-hidden="true">
+                            <div class="modal-dialog modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">Add User Data</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-row">
+                                              <div class="form-group col-md-6">
+                                                <label for="FirstName">First Name</label>
+                                                <input
+                                                  type="text"
+                                                  class="form-control"
+                                                  id="FirstName"
+                                                  placeholder="FirstName"
+                                                />
+                                              </div>
+                                              <div class="form-group col-md-6">
+                                                <label for="LastName">Last Name</label>
+                                                <input
+                                                  type="text"
+                                                  class="form-control"
+                                                  id="LastName"
+                                                  placeholder="LastName"
+                                                />
+                                              </div>
+                                            </div>
+                    
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                  <label for="contact1">Contact-1</label>
+                                                  <input
+                                                    type="text"
+                                                    class="form-control"
+                                                    id="contact1"
+                                                    placeholder="contact1"
+                                                  />
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                  <label for="contact2">Contact-2</label>
+                                                  <input
+                                                    type="text"
+                                                    class="form-control"
+                                                    id="contact2"
+                                                    placeholder="contact2"
+                                                  />
+                                                </div>
+                                              </div>
+                    
+                    
+                                              <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                  <label for="email">Email</label>
+                                                  <input
+                                                    type="email"
+                                                    class="form-control"
+                                                    id="email"
+                                                    placeholder="email"
+                                                  />
+                                                </div>
+                                               
+                                              </div>
+                                          
+                                          </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-success">Save changes</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--END MODEL DATA-->
+
+
+
+
+
+                                        <div class="datatable-wrapper table-responsive">
+                                            <table id="datatable" class="display compact table table-striped table-bordered">
+                                                <thead>
+                                                    <tr>
+                                                        <th>First Name</th>
+                                                        <th>Last Name</th>
+                                                        <th>Contact-1</th>
+                                                        <th>Contact-2</th>
+                                                        <th>Email</th>
+                                                        
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Tiger </td>
+                                                        <td>Nixon</td>
+                                                        <td>+17325689894</td>
+                                                        <td>+17325689895</td>
+                                                        <td>tiger@gmail.com</td>
+                                                        
+                                                    </tr>
+                                                    <tr>
+
+                                                        <td>Garrett</td>
+                                                        <td>Winters</td>
+                                                        <td>+17325689897</td>
+                                                        <td>+17325689896</td>
+                                                        <td>garrett@gmail.com</td>
+
+                                                        
+                                                    </tr>
+                                                    
+                                                </tbody>
+                                                {% comment %} <tfoot>
+                                                    <tr>
+                                                        <th>Name</th>
+                                                        <th>Position</th>
+                                                        <th>Office</th>
+                                                        <th>Age</th>
+                                                        <th>Start date</th>
+                                                        <th>Salary</th>
+                                                    </tr>
+                                                </tfoot> {% endcomment %}
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end row -->
+                    </div>
+                    <!-- end container-fluid -->
+                </div>
+                <!-- end app-main -->
+            </div>
+            <!-- end app-container -->
+            {% endblock %}         
+            
